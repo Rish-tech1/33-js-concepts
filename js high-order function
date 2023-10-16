@@ -1,0 +1,31 @@
+A function that takes one or multiple functions as parameters or returns a function is a high-order function. They're pretty standard in functional programming. Like any other function, you can pass them as values, which favors reusability. That also makes your code more concise and declarative. Let's see some examples:
+
+function brew(coffeeMaker, coffeeType) {
+return coffeeMaker(coffeeType);
+}
+
+function makeAmericano(coffeeAmount) {
+return `Brewing ${coffeeAmount} ml of Americano...`;
+}
+
+function makeLatte(coffeeAmount) {
+return `Steaming ${coffeeAmount} ml of milk for Latte...`;
+}
+
+const result1 = brew(makeAmericano, 200); // returns "Brewing 200 ml of Americano..."
+const result2 = brew(makeLatte, 300); // returns "Steaming 300 ml of milk for Latte..."
+JavaScript has a few built-in higher-order functions developers use all the time. They help to perform complex operations, and are essential to interact with frameworks like React, Vue, and Angular. Let's see some of the most popular ones!
+
+A. JavaScript Reduce()
+Reduce is a powerful method that takes an array of elements to reduce them by applying a function to each element. It accumulates all the elements and returns a single value.
+
+B. JavaScript Map()
+The Map function allows you to modify each element of an array returning a new identical array. You can also accomplish this by using for loops or nesting. Map() provides a more elegant way to do it following the functional programming rules.
+
+C. JavaScript Filter()
+This function can filter an array according to a particular condition and returns a new array with the elements that passed the condition. Remember that the original stays as is since it returns a new array.
+
+D. JavaScript Sort()
+The sort() function allows you to overwrite an array by sorting its elements. If it's an array of integers, it'll sort it in ascending order by default. On the flip side, if it's an array of strings, it will sort it alphabetically. What if you don't want to sort an array in alphabetical or ascending order, you may ask? You can easily sort arrays in non-alphabetical or descending order by combining sort() with reverse(). So after sorting the list, you have to do listname.reverse() to reverse its order.
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                        
